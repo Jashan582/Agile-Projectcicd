@@ -16,14 +16,11 @@ model User {
 }
 
 model reminder {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
   completed   Boolean
-  dateCreated DateTime @db.Date
-  dateDue     DateTime?
+  dateCreated DateTime  @db.Date
+  dateDue     DateTime? @db.Date
   description String
   title       String
-  userId      String   @db.ObjectId
+  userId      String    @db.ObjectId
 }
-
-
-
