@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <%- include('layout') %>
 
 <section class="note">
@@ -11,17 +12,16 @@
 </section>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f5962076ea923fad0ead26224045a58a2f67dfa2
 <%- include ("../partials/navbar.ejs") %>
 <style>
-  body{
-    ul{
-      border:black solid 2px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-  }
-
+  body ul {
+  border:black solid 2px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  } 
   li, #creation {
     /* border: solid rgb(176, 176, 176) 3px; */
     padding: 10px 10px 10px 10px;
@@ -77,9 +77,15 @@
         <h4><strong><%= note.title %></strong></h4>
       </div>
       <div style="display:flex">
-        <a id="btn" style="background-color: blue;" href="/notes/edit/<%= note.id %>">Open</a>
+        <a id="btn" style="background-color: blue;" href="/notes/edit/<%= note.id %>/">Open</a>
         <a id="btn" style="background-color: red;" href="#" onclick="deleteNote('<%= note.id %>')">Delete</a>
       </div>
+      <form action="/notes/share/<%= note.id %>" method="POST" style="height:auto;">
+        <input type="email" id="email" name="email" placeholder="Enter email to share" required>
+        <input type="submit" value="Share" style="font-size: larger;">
+      </form>
+      
+
     </li>
   <% }); %>
 
@@ -102,6 +108,7 @@
     });
   }
 </script>
+<<<<<<< HEAD
 =======
 <div class="d-flex">
     <!-- Sidebar -->
@@ -136,3 +143,6 @@
   <script src="editorInit.js"></script>
 >>>>>>> EJS
 >>>>>>> 6a665c09edbb598cda3b32d296ea2b30eb7f49cc
+=======
+
+>>>>>>> f5962076ea923fad0ead26224045a58a2f67dfa2
