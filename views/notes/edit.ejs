@@ -1,10 +1,15 @@
-<%- include('layout') %>
+<%- include ("../partials/navbar.ejs") %>
 
-<section class="edit-note">
-    <h1>Edit Note</h1>
-    <form action="/notes/<%= note.id %>_method=PUT" method="POST">
-        <input type="text" name="title" value="<%= note.title %>">
-        <textarea name="content"><%= note.content %></textarea>
-        <button type="submit">Save Changes</button>
-    </form>
-</section>
+<form action="/notes/update/<%= note.id %>" method="POST" style="height:auto;">
+    <input style="width:100%;font-size:x-large;border: none;" type="text" id="title" name="title" value="<%= note.title %>"><br>
+    <textarea id="content" name="content" style="width: 100%; font-size: larger; border: none; overflow: hidden;height:100%;" oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"><%= note.content %></textarea><br>
+    <input type="submit" value="Submit" style="font-size: larger;">
+</form>
+
+<script>
+window.onload = function() {
+    var textarea = document.getElementById('content');
+    textarea.style.height = '';
+    textarea.style.height = textarea.scrollHeight + 'px';
+}
+</script>
