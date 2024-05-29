@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <%- include('layout') %>
 
 <section class="note">
@@ -11,13 +10,10 @@
     </form>
 </section>
 =======
-<<<<<<< HEAD
-=======
->>>>>>> f5962076ea923fad0ead26224045a58a2f67dfa2
 <%- include ("../partials/navbar.ejs") %>
 <style>
   body ul {
-  border:black solid 2px;
+  /* border:black solid 2px; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -77,23 +73,19 @@
         <h4><strong><%= note.title %></strong></h4>
       </div>
       <div style="display:flex">
-        <a id="btn" style="background-color: blue;" href="/notes/edit/<%= note.id %>/">Open</a>
-        <a id="btn" style="background-color: red;" href="#" onclick="deleteNote('<%= note.id %>')">Delete</a>
+        <a id="btn" style="background-color:#E7D4FD;color:  black; " href="/notes/edit/<%= note.id %>/">Open</a>
+        <a id="btn" style="background-color:#FFF092;color:  black; " href="#" onclick="deleteNote('<%= note.id %>')">Delete</a>
       </div>
-      <form action="/notes/share/<%= note.id %>" method="POST" style="height:auto;">
+      <form action="/notes/share/<%= note.id %>" method="POST" style="height:auto; margin-top: 30px;margin-left: 20px;">
         <input type="email" id="email" name="email" placeholder="Enter email to share" required>
-        <input type="submit" value="Share" style="font-size: larger;">
+        <input type="submit" value="Share" class="share-btn style="font: size 30px; margin-left: 10px; border: none;">
       </form>
       
 
     </li>
   <% }); %>
 
-  <a style="width: 100%;
-            background-color:white; 
-            padding:30px;border:solid; 
-            border: rgb(232, 232, 232) solid 15px;" 
-            id="creation" href="/notes/new">Create Notebook</a>
+  <a style="background-color: transparent; border-radius: 8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 10px;margin-bottom: 10px; color: black" id="creation" href="/notes/new">Create a New Notebook</a>
 </ul>
 
 
@@ -108,8 +100,6 @@
     });
   }
 </script>
-<<<<<<< HEAD
-=======
 <div class="d-flex">
     <!-- Sidebar -->
     <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar">
@@ -141,8 +131,4 @@
   
   <!-- Should be in public directory but idk how we're serving files  -->
   <script src="editorInit.js"></script>
->>>>>>> EJS
->>>>>>> 6a665c09edbb598cda3b32d296ea2b30eb7f49cc
-=======
 
->>>>>>> f5962076ea923fad0ead26224045a58a2f67dfa2

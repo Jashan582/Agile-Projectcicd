@@ -14,14 +14,6 @@ model User {
   password String
   role     String
 }
-<<<<<<< HEAD
-model reminder {
-  id          String    @id @default(auto()) @map("_id") @db.ObjectId
-  completed   Boolean
-  dateCreated DateTime  @db.Date
-  dateDue     DateTime? @db.Date
-  description String
-=======
 
 model flashcard {
   id String @id @default(auto()) @map("_id") @db.ObjectId
@@ -35,9 +27,8 @@ model note {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   content     String
   dateCreated DateTime @db.Date
->>>>>>> f5962076ea923fad0ead26224045a58a2f67dfa2
   title       String
-  userId      String    @db.ObjectId
+  userId      String   @db.ObjectId
 }
 
 model reminder {
